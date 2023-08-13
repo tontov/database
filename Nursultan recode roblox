@@ -4,7 +4,7 @@ local Window = Library.CreateLib("Nursultan", "RJTheme1")
 
 local Tab = Window:NewTab("MM2")
 
-local Section = Tab:NewSection("credits: supergovnuk")
+local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
 Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
