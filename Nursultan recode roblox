@@ -10,8 +10,15 @@ Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Мак�
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
+Section:NewButton("Def speed", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
 Section:NewSlider("JumpPower", "kangaroo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewButton("Def JumpPower", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 end)
 
 Section:NewButton("Rejoin", "ButtonInfo", function()
