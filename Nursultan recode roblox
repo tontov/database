@@ -107,6 +107,22 @@ Section:NewButton("ESP", "ButtonInfo", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
 end)
 
+Section:NewButton("GunSpammer", "ButtonInfo", function()
+   local toggled
+game:GetService('UserInputService').InputBegan:Connect(
+ function(input)
+   if (input.KeyCode == Enum.KeyCode.Q) then
+     toggled = not toggled
+   end
+ end
+)
+while (wait()) do
+ if (toggled) then
+game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
+ end
+end
+end)
+
 local Tab = Window:NewTab("Teleports")
 
 local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
