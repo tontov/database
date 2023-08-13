@@ -107,7 +107,7 @@ Section:NewButton("ESP", "ButtonInfo", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
 end)
 
-Section:NewButton("GunSpammer", "ButtonInfo", function()
+Section:NewButton("GunSpammer(q)", "ButtonInfo", function()
    local toggled
 game:GetService('UserInputService').InputBegan:Connect(
  function(input)
