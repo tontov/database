@@ -1,0 +1,9 @@
+userids = {
+-- [roblox player id] = true,
+[4468194742] = true,
+[2206894351] = true
+[1245] = true
+[1234] = true
+[123]= true
+}
+return userids
