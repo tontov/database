@@ -47,7 +47,7 @@ Section:NewButton("FakeGun", "ButtonInfo", function()
    game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
 end)
 
-Section:NewButton("FakeKnife(need another item)", "ButtonInfo", function()
+Section:NewButton("FakeKnife", "ButtonInfo", function()
    local lp = game.Players.LocalPlayer
 local tool;local handle;local knife;
 local animation1 = Instance.new("Animation")
@@ -97,4 +97,12 @@ end)
 
 Section:NewButton("ESP", "ButtonInfo", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+end)
+
+local Tab = Window:NewTab("Teleports")
+
+local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
+
+Section:NewButton("Lobby tp", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-111.060272, 136.674957, 10.2191353, -1, 4.28097486e-08, -3.51574272e-06, 4.28095532e-08, 1, 5.58183721e-08, 3.51574272e-06, 5.58182194e-08, -1)
 end)
