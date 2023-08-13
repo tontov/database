@@ -1,0 +1,117 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("Nursultan", "RJTheme1")
+
+local Tab = Window:NewTab("MM2")
+
+local Section = Tab:NewSection("credits: supergovnuk")
+
+Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "kangaroo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewButton("Rejoin", "ButtonInfo", function()
+   local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+ 
+local Rejoin = coroutine.create(function()
+    local Success, ErrorMessage = pcall(function()
+        TeleportService:Teleport(game.PlaceId, LocalPlayer)
+    end)
+ 
+    if ErrorMessage and not Success then
+        warn(ErrorMessage)
+    end
+end)
+ 
+coroutine.resume(Rejoin)
+end)
+
+Section:NewButton("Blink(X)", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://paste.gg/p/anonymous/d3492bd620bd4c46b54680ac80b0fa0d/files/161ddd9c992c4ceba3c298458d45188a/raw", true))()
+end)
+
+Section:NewButton("FakeGun(Visual)", "ButtonInfo", function()
+   game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
+end)
+
+Section:NewButton("ESP", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+end)
+
+Section:NewButton("Crash yourself(spin)", "ButtonInfo", function()
+   power = 400
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+
+Section:NewButton("spin", "ButtonInfo", function()
+   power = 250
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+
+local Tab = Window:NewTab("Visual")
+
+local Section = Tab:NewSection("credits: supergovnuk")
+
+Section:NewButton("Red hat", "ButtonInfo", function()
+  local chill = game:GetService("Workspace")["x1e2p"]
+local esp = Instance.new("BoxHandleAdornment",chill)
+esp.Adornee = chill
+esp.ZIndex = 0
+esp.Size = Vector3.new(1.9, 0.5, 1.9)
+esp.SizeRelativeOffset = Vector3.new(0, 1, 0)
+esp.Transparency = 0.3
+esp.AlwaysOnTop = true
+esp.Color3 = Color3.fromRGB(255,0,0)
+end)
+
+Section:NewButton("Green hat", "ButtonInfo", function()
+  local chill = game:GetService("Workspace")["x1e2p"]
+local esp = Instance.new("BoxHandleAdornment",chill)
+esp.Adornee = chill
+esp.ZIndex = 0
+esp.Size = Vector3.new(1.9, 0.5, 1.9)
+esp.SizeRelativeOffset = Vector3.new(0, 1, 0)
+esp.Transparency = 0.3
+esp.AlwaysOnTop = true
+esp.Color3 = Color3.fromRGB(0,255,0)
+end)
+
+Section:NewButton("Blue hat", "ButtonInfo", function()
+  local chill = game:GetService("Workspace")["x1e2p"]
+local esp = Instance.new("BoxHandleAdornment",chill)
+esp.Adornee = chill
+esp.ZIndex = 0
+esp.Size = Vector3.new(1.9, 0.5, 1.9)
+esp.SizeRelativeOffset = Vector3.new(0, 1, 0)
+esp.Transparency = 0.3
+esp.AlwaysOnTop = true
+esp.Color3 = Color3.fromRGB(0,0,255)
+end)
