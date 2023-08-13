@@ -43,6 +43,14 @@ Section:NewButton("Blink(X)", "ButtonInfo", function()
    loadstring(game:HttpGet("https://paste.gg/p/anonymous/d3492bd620bd4c46b54680ac80b0fa0d/files/161ddd9c992c4ceba3c298458d45188a/raw", true))()
 end)
 
+Section:NewToggle("Fov", "ToggleInfo", function(efov)
+    if efov then
+        workspace.CurrentCamera.FieldOfView = 120
+    else
+        workspace.CurrentCamera.FieldOfView = 70
+    end
+end)
+
 Section:NewButton("FakeGun", "ButtonInfo", function()
    game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
 end)
