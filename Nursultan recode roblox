@@ -1,3 +1,5 @@
+-- nursultan by supergovnuk
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 
 local Window = Library.CreateLib("Nursultan", "RJTheme1")
@@ -107,7 +109,7 @@ Section:NewButton("ESP", "ButtonInfo", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
 end)
 
-Section:NewButton("GunSpammer(q)", "ButtonInfo", function()
+Section:NewButton("GunSpammer", "ButtonInfo", function()
    local toggled
 game:GetService('UserInputService').InputBegan:Connect(
  function(input)
@@ -121,6 +123,10 @@ while (wait()) do
 game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
  end
 end
+end)
+
+Section:NewKeybind("TP to gun", "KeybindInfo", Enum.KeyCode.G, function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").GunDrop.CFrame
 end)
 
 local Tab = Window:NewTab("Teleports")
