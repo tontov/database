@@ -2,7 +2,7 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 
-local Window = Library.CreateLib("xerss", "RJTheme4")
+local Window = Library.CreateLib("xerss", "RJTheme1")
 
 local Tab = Window:NewTab("MM2")
 
@@ -135,4 +135,8 @@ local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
 Section:NewButton("Lobby tp", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-111.060272, 136.674957, 10.2191353, -1, 4.28097486e-08, -3.51574272e-06, 4.28095532e-08, 1, 5.58183721e-08, 3.51574272e-06, 5.58182194e-08, -1)
+end)
+
+Section:NewButton("Map Pick tp", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-111.412567, 139.122986, 77.4230423, -0.999921083, -3.82700378e-08, -0.0125622349, -3.83309633e-08, 1, 4.60922367e-09, 0.0125622349, 5.09038234e-09, -0.999921083)
 end)
