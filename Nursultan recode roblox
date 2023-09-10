@@ -58,7 +58,8 @@ Section:NewButton("FakeGun", "ButtonInfo", function()
 end)
 
 Section:NewButton("FakeKnife", "ButtonInfo", function()
-local lp = game.Players.LocalPlayer
+
+      local lp = game.Players.LocalPlayer
 local tool;local handle;local knife;
 local animation1 = Instance.new("Animation")
 animation1.AnimationId = "rbxassetid://2467567750"
