@@ -122,6 +122,7 @@ end
             v.Parent = game.Players.LocalPlayer.Character
     end	
 end
+end)
 
 Section:NewButton("ESP", "ButtonInfo", function()
 	local function getRoleColor(plr)
