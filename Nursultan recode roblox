@@ -58,7 +58,7 @@ Section:NewButton("FakeGun", "ButtonInfo", function()
 end)
 
 Section:NewButton("FakeKnife", "ButtonInfo", function()
-   local lp = game.Players.LocalPlayer
+local lp = game.Players.LocalPlayer
 local tool;local handle;local knife;
 local animation1 = Instance.new("Animation")
 animation1.AnimationId = "rbxassetid://2467567750"
@@ -103,7 +103,24 @@ elseif lp.Character and knife then
 knife.CFrame = lp.Character:WaitForChild"UpperTorso".CFrame * CFrame.new(-0.200027466, -0.399999619, 0.5, 3.22982669e-05, -0.707153201, 0.707060337, 1.33886933e-05, 0.707060337, 0.707153141, -1, -1.33812428e-05, 3.22982669e-05)
 end
 end)
-end)
+
+local args = {
+    [1] = "GGSign"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Fake Knife" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "GGSign" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end	
+end
 
 Section:NewButton("ESP", "ButtonInfo", function()
 	local function getRoleColor(plr)
