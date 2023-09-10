@@ -23,6 +23,10 @@ Section:NewButton("Def JumpPower", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 end)
 
+Section:NewButton("Reset Character", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
 Section:NewButton("Rejoin", "ButtonInfo", function()
    local TeleportService = game:GetService("TeleportService")
 local Players = game:GetService("Players")
