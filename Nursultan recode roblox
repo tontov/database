@@ -8,21 +8,6 @@ local Tab = Window:NewTab("MM2")
 
 local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
-Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-Section:NewButton("Def speed", "ButtonInfo", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-end)
-
-Section:NewSlider("JumpPower", "kangaroo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
-Section:NewButton("Def JumpPower", "ButtonInfo", function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-end)
-
 Section:NewButton("Reset Character", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
@@ -205,4 +190,23 @@ if v.Character ~= nil and v.Backpack:FindFirstChild("Gun") or v.Character:FindFi
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
 end
 end
+end)
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
+
+Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewButton("Def speed", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+Section:NewSlider("JumpPower", "kangaroo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewButton("Def JumpPower", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 end)
