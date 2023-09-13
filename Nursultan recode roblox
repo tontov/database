@@ -46,7 +46,7 @@ Section:NewButton("Sit", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 end)
 
-Section:NewToggle("Fov", "ToggleInfo", function(eghost)
+Section:NewToggle("Infinite Ghost", "ToggleInfo", function(eghost)
     if eghost then
         local args = {
     [1] = true
