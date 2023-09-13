@@ -46,6 +46,23 @@ Section:NewButton("Sit", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 end)
 
+Section:NewToggle("Fov", "ToggleInfo", function(eghost)
+    if eghost then
+        local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Stealth"):FireServer(unpack(args))
+    else
+        local args = {
+    [1] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Stealth"):FireServer(unpack(args))
+    end
+end)
+
+
 Section:NewButton("FakeGun", "ButtonInfo", function()
    game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
 end)
