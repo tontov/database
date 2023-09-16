@@ -3,5 +3,5 @@ local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.c
 if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/database/main/Nursultan%20recode%20roblox", true))() -- Ваш скрипт
 else
-  game:service('Players').LocalPlayer:Kick('.')
+  game:service('Players').LocalPlayer:Kick('Buy script in https://discord.gg/mD5GgU93KQ')
 end
