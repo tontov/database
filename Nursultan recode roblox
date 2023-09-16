@@ -10,6 +10,15 @@ local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
 Section:NewButton("Reset Character", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Your character reseted!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 end)
 
 Section:NewButton("Rejoin", "ButtonInfo", function()
@@ -31,22 +40,32 @@ coroutine.resume(Rejoin)
 end)
 
 Section:NewButton("Blink(X)", "ButtonInfo", function()
+   
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Blink sucessfully loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+   
    loadstring(game:HttpGet("https://paste.gg/p/anonymous/d3492bd620bd4c46b54680ac80b0fa0d/files/161ddd9c992c4ceba3c298458d45188a/raw", true))()
-end)
-
-Section:NewToggle("Fov", "ToggleInfo", function(efov)
-    if efov then
-        workspace.CurrentCamera.FieldOfView = 120
-    else
-        workspace.CurrentCamera.FieldOfView = 70
-    end
 end)
 
 Section:NewButton("Sit", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "You succesfully sit!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 end)
 
-Section:NewToggle("Infinite Ghost (ghost perk need)", "ToggleInfo", function(eghost)
+Section:NewToggle("Infinity Ghost (ghost perk need)", "ToggleInfo", function(eghost)
     if eghost then
         local args = {
     [1] = true
@@ -60,14 +79,32 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gamep
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Stealth"):FireServer(unpack(args))
     end
+    
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Infinity Ghost loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+    
 end)
 
 
 Section:NewButton("FakeGun (fake gun perk need)", "ButtonInfo", function()
    game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
+   
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Fake Gun loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+   
 end)
 
-Section:NewButton("FakeKnife", "ButtonInfo", function()
+Section:NewButton("FakeKnife (GG sign need)", "ButtonInfo", function()
 
       local lp = game.Players.LocalPlayer
 local tool;local handle;local knife;
@@ -132,6 +169,15 @@ end
             v.Parent = game.Players.LocalPlayer.Character
     end	
 end
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Fake Knife loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 end)
 
 Section:NewButton("ESP", "ButtonInfo", function()
@@ -158,6 +204,15 @@ while true do
    end
    wait(0.1)
 end
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "ESP loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 end)
 
 Section:NewButton("GunSpammer", "ButtonInfo", function()
@@ -174,6 +229,15 @@ while (wait()) do
 game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
  end
 end
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Gun spammer loaded press q!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 end)
 
 Section:NewKeybind("TP to gun", "KeybindInfo", Enum.KeyCode.G, function()
@@ -185,10 +249,26 @@ local Tab = Window:NewTab("Teleports")
 local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
 Section:NewButton("Lobby tp", "ButtonInfo", function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Teleported to lobby!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-111.060272, 136.674957, 10.2191353, -1, 4.28097486e-08, -3.51574272e-06, 4.28095532e-08, 1, 5.58183721e-08, 3.51574272e-06, 5.58182194e-08, -1)
 end)
 
 Section:NewButton("Map Pick tp", "ButtonInfo", function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Teleported!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-111.412567, 139.122986, 77.4230423, -0.999921083, -3.82700378e-08, -0.0125622349, -3.83309633e-08, 1, 4.60922367e-09, 0.0125622349, 5.09038234e-09, -0.999921083)
 end)
 
@@ -199,9 +279,24 @@ murder = v.Name
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
 end
 end
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Teleported to murder!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
 end)
 
 Section:NewButton("Sheriff tp", "ButtonInfo", function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Teleported to sheriff!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
 for _,v in pairs(game.Players:GetPlayers()) do
 if v.Character ~= nil and v.Backpack:FindFirstChild("Gun") or v.Character:FindFirstChild("Gun") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
@@ -228,3 +323,69 @@ end)
 Section:NewButton("Def JumpPower", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 end)
+
+Section:NewSlider("Gravity", "qwerty", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.workspace.Gravity = s
+end)
+
+Section:NewButton("Def Gravity", "ButtonInfo", function()
+game.workspace.Gravity = 196.2
+end)
+
+Section:NewButton("Swim fly (E)", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/LLnAYYMC"))()
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Fly loaded press E!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
+end)
+
+Section:NewSlider("Fov", "qwerty", 120, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    workspace.CurrentCamera.FieldOfView = s
+end)
+
+Section:NewButton("Reset Fov", "ToggleInfo", function(efov)
+        workspace.CurrentCamera.FieldOfView = 75
+
+    
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Fov succesfully changed!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+    
+end)
+
+Section:NewButton("FreeCam (M)", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/FreeCam/main/script"))()
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Fly loaded press E!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
+
+end)
+
+local function callback(Text)
+end
+ 
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xerss";
+    Text = "Script loaded!";
+    Duration = "1";
+    Icon = "http://www.roblox.com/asset/?id=8709610734",
+    Callback = NotificationBindable;
+})
