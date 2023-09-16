@@ -376,6 +376,10 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewKeybind("UI Toggle keybind", "KeybindInfo", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
+
 local function callback(Text)
 end
  
