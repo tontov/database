@@ -1,7 +1,8 @@
 userids = {
 -- [айди игрока в роблоксе] = true,
-[4468194742] = true,
+[4468194742] = true, -- main acc
 [1273223616] = true,
+[4930033337] = true, -- alt acc
 [1084904305] = true
 }
 return userids
