@@ -609,7 +609,7 @@ local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
  
 game.StarterGui:SetCore("SendNotification", {
-    Title = "xerss";
+    Title = "卐 xerss 卐";
     Text = "Script loaded!";
     Duration = "1";
     Icon = "http://www.roblox.com/asset/?id=8709610734",
