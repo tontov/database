@@ -115,6 +115,66 @@ Section:NewToggle("Sprint trail (Sprint perk need)", "ToggleInfo", function(espr
     
 end)
 
+Section:NewToggle("Golden flying radio (radio,ghost,sprint need)", "ToggleInfo", function(eradio)
+    if eradio then
+        local args = {
+    [1] = true
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Stealth"):FireServer(unpack(args))
+    
+        local args = {
+            [1] = true
+        }
+        
+
+        game:GetService("Players").LocalPlayer.Character.SpeedTrail.Toggle:FireServer(unpack(args))
+        
+        wait(0.5)
+
+        local args = {
+            [1] = "Default",
+            [2] = "Radios"
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):WaitForChild("Equip"):FireServer(unpack(args))
+       
+        wait(0.5)
+
+        local args = {
+            [1] = "Gold",
+            [2] = "Radios"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):WaitForChild("Equip"):FireServer(unpack(args))
+        
+    else
+    
+            local args = {
+            [1] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Stealth"):FireServer(unpack(args))
+        
+            local args = {
+                [1] = false
+            }
+            
+            game:GetService("Players").LocalPlayer.Character.SpeedTrail.Toggle:FireServer(unpack(args))
+        
+            local args = {
+                [1] = 1,
+                [2] = "Radios"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):WaitForChild("Unequip"):FireServer(unpack(args))
+
+        end
+            
+            
+    
+end)
+
 
 Section:NewButton("FakeGun (fake gun perk need)", "ButtonInfo", function()
    game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer("")
