@@ -81,7 +81,7 @@ for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 
 wait(0.5)
 
-game.Players.LocalPlayer.Character.Teddy.GripPos = Vector3.new(33,0,-0.4)
+game.Players.LocalPlayer.Character.Teddy.GripPos = Vector3.new(33,33,-0.4)
 
 end)
 
