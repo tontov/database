@@ -3,7 +3,8 @@ userids = {
 [4468194742] = true, -- main acc
 [1273223616] = true,
 [4930033337] = true, -- alt acc
-[1084904305] = true
+[1084904305] = true,
+[4068514992] = true
 }
 return userids
 
