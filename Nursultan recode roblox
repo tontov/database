@@ -21,6 +21,36 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewButton("Dick (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+local args = {
+    [1] = 14884884032,
+    [2] = Enum.NormalId.Top,
+    [3] = 5,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-1.1,-2.5)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end)
+
 Section:NewButton("BOOM (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -119,47 +149,6 @@ local args = {
     [3] = 15,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
     [5] = CFrame.new(-110.74470520019531, 137.67196655273438, 67.539161682128906, -0.9999244809150696, -0.0007501819636672735, 0.01226806640625, -0, 0.9981356263160706, 0.06103515625, -0.012290981598198414, 0.0610305480659008, -0.9980602264404297)
-}
-
-game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
-
-end)
-
-Section:NewButton("Water (Spray need)", "ButtonInfo", function()
-local args = {
-    [1] = "SprayPaint"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
-
-for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-        if v.name == "Emotes" then
-            v.Parent = game.Players.LocalPlayer.Character
-    end
-end
-
-for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-        if v.name == "SprayPaint" then
-            v.Parent = game.Players.LocalPlayer.Character
-    end
-end
-
-local args = {
-    [1] = 14878985905,
-    [2] = Enum.NormalId.Right,
-    [3] = 250,
-    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
-    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-}
-
-game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
-
-local args = {
-    [1] = 14878985905,
-    [2] = Enum.NormalId.Left,
-    [3] = 250,
-    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
-    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 }
 
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
