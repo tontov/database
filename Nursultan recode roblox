@@ -104,13 +104,12 @@ game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(un
 
 end)
 
-Section:NewButton("Tsunami (Spray need)", "ButtonInfo", function()
+Section:NewButton("Tsunami lobby (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
-
 
 for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         if v.name == "Emotes" then
@@ -127,7 +126,11 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/zxcttt/main/tttttt", true))()
 end)
 
-Section:NewButton("Blur (Spray need)", "ButtonInfo", function()
+Section:NewButton("Floor Is lava lobby (Spray need)", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/zxcttt/main/zxctttttttttttt", true))()
+end)
+
+Section:NewButton("Black hole (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
 }
@@ -147,7 +150,7 @@ for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 end
 
 local args = {
-    [1] = 80373024,
+    [1] = 14882467507,
     [2] = Enum.NormalId.Top,
     [3] = 10000,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -157,7 +160,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 80373024,
+    [1] = 14882467507,
     [2] = Enum.NormalId.Right,
     [3] = 10000,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -167,7 +170,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 80373024,
+    [1] = 14882467507,
     [2] = Enum.NormalId.Bottom,
     [3] = 10000,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -177,7 +180,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 80373024,
+    [1] = 14882467507,
     [2] = Enum.NormalId.Left,
     [3] = 10000,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
