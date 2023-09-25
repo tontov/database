@@ -105,6 +105,12 @@ game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(un
 end)
 
 Section:NewButton("Tsunami (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
 for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         if v.name == "Emotes" then
             v.Parent = game.Players.LocalPlayer.Character
