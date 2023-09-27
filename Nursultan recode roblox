@@ -182,6 +182,41 @@ end
 end
 end)
 
+Section:NewButton("Speed glitch all (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for _, v in pairs(game.Players:GetPlayers()) do
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+local args = {
+    [1] = 14882467507,
+    [2] = Enum.NormalId.Top,
+    [3] = 5,
+    [4] = v.Character.HumanoidRootPart,
+    [5] = v.Character.HumanoidRootPart.CFrame * CFrame.new(30,150,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end
+end)
+
 Section:NewButton("Reset all and yourself (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
