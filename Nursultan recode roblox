@@ -21,6 +21,28 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewButton("Russian flag (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/zxcttt/main/zxctuttututtutu", true))()
+end)
+
 Section:NewButton("Dick (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -580,19 +602,6 @@ end)
 coroutine.resume(Rejoin)
 end)
 
-Section:NewButton("Blink(X)", "ButtonInfo", function()
-   
-   game.StarterGui:SetCore("SendNotification", {
-    Title = "xerss";
-    Text = "Blink sucessfully loaded!";
-    Duration = "1";
-    Icon = "http://www.roblox.com/asset/?id=8709610734",
-    Callback = NotificationBindable;
-})
-   
-   loadstring(game:HttpGet("https://paste.gg/p/anonymous/d3492bd620bd4c46b54680ac80b0fa0d/files/161ddd9c992c4ceba3c298458d45188a/raw", true))()
-end)
-
 Section:NewButton("Sit", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 
@@ -1092,7 +1101,7 @@ local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
  
 game.StarterGui:SetCore("SendNotification", {
-    Title = "卐 xerss 卐";
+    Title = "xerss";
     Text = "Script loaded!";
     Duration = "1";
     Icon = "http://www.roblox.com/asset/?id=8709610734",
