@@ -43,6 +43,79 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/zxcttt/main/zxctuttututtutu", true))()
 end)
 
+Section:NewButton("Lava sky (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+local args = {
+    [1] = 14882200615,
+    [2] = Enum.NormalId.Left,
+    [3] = 10000,
+    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
+    [5] = CFrame.new(100.11414337158203, 137.2508087158203, 24.201295852661133, 0.012401331216096878, 0.24235223233699799, -0.9701090455055237, 2.3283067140944524e-10, 0.9701837301254272, 0.2423708587884903, 0.9999231696128845, -0.0030057216063141823, 0.012031568214297295)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14882200615,
+    [2] = Enum.NormalId.Right,
+    [3] = 10000,
+    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
+    [5] = CFrame.new(-235.11414337158203, 137.2508087158203, 24.201295852661133, 0.012401331216096878, 0.24235223233699799, -0.9701090455055237, 2.3283067140944524e-10, 0.9701837301254272, 0.2423708587884903, 0.9999231696128845, -0.0030057216063141823, 0.012031568214297295)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14882200615,
+    [2] = Enum.NormalId.Front,
+    [3] = 10000,
+    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
+    [5] = CFrame.new(100.11414337158203, 137.2508087158203, 200.201295852661133, 0.012401331216096878, 0.24235223233699799, -0.9701090455055237, 2.3283067140944524e-10, 0.9701837301254272, 0.2423708587884903, 0.9999231696128845, -0.0030057216063141823, 0.012031568214297295)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14882200615,
+    [2] = Enum.NormalId.Back,
+    [3] = 10000,
+    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
+    [5] = CFrame.new(100.11414337158203, 137.2508087158203, -135.201295852661133, 0.012401331216096878, 0.24235223233699799, -0.9701090455055237, 2.3283067140944524e-10, 0.9701837301254272, 0.2423708587884903, 0.9999231696128845, -0.0030057216063141823, 0.012031568214297295)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14882200615,
+    [2] = Enum.NormalId.Bottom,
+    [3] = 10000,
+    [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Fountain"):WaitForChild("Middle"):WaitForChild("Base"),
+    [5] = CFrame.new(100.11414337158203, 300.2508087158203, -24.201295852661133, 0.012401331216096878, 0.24235223233699799, -0.9701090455055237, 2.3283067140944524e-10, 0.9701837301254272, 0.2423708587884903, 0.9999231696128845, -0.0030057216063141823, 0.012031568214297295)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+
+
+end)
+
 Section:NewButton("Dick (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -125,6 +198,92 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+
+
+
+end)
+
+Section:NewButton("ХУЙ (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+local args = {
+    [1] = 14203055457,
+    [2] = Enum.NormalId.Back,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(-2,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14203051928,
+    [2] = Enum.NormalId.Back,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14203034313,
+    [2] = Enum.NormalId.Back,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(2,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14203051928,
+    [2] = Enum.NormalId.Front,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14203034313,
+    [2] = Enum.NormalId.Front,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(-2,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14203055457,
+    [2] = Enum.NormalId.Front,
+    [3] = 2,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(2,4,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+
 
 
 
