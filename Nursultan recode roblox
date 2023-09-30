@@ -406,7 +406,7 @@ end
 
 
 local args = {
-    [1] = 14878870919,
+    [1] = 14562429962,
     [2] = Enum.NormalId.Right,
     [3] = 35,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -416,7 +416,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 14878870919,
+    [1] = 14562429962,
     [2] = Enum.NormalId.Left,
     [3] = 35,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -426,7 +426,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 14878870919,
+    [1] = 14562429962,
     [2] = Enum.NormalId.Front,
     [3] = 35,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
@@ -436,7 +436,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 local args = {
-    [1] = 14878870919,
+    [1] = 14562429962,
     [2] = Enum.NormalId.Back,
     [3] = 35,
     [4] = workspace:WaitForChild("Lobby"):WaitForChild("Map"):WaitForChild("Part"),
