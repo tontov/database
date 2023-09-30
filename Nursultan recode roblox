@@ -1123,19 +1123,6 @@ Section:NewButton("Def Gravity", "ButtonInfo", function()
 game.workspace.Gravity = 196.2
 end)
 
-Section:NewButton("Swim fly (E)", "ButtonInfo", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/LLnAYYMC"))()
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "xerss";
-    Text = "Fly loaded press E!";
-    Duration = "1";
-    Icon = "http://www.roblox.com/asset/?id=8709610734",
-    Callback = NotificationBindable;
-})
-
-end)
-
 Section:NewSlider("Fov", "qwerty", 120, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
     workspace.CurrentCamera.FieldOfView = s
 end)
@@ -1153,30 +1140,3 @@ Section:NewButton("Reset Fov", "ToggleInfo", function(efov)
 })
     
 end)
-
-Section:NewButton("FreeCam (M)", "ButtonInfo", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/tontov/FreeCam/main/script"))()
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "xerss";
-    Text = "Fly loaded press E!";
-    Duration = "1";
-    Icon = "http://www.roblox.com/asset/?id=8709610734",
-    Callback = NotificationBindable;
-})
-
-end)
-
-local function callback(Text)
-end
- 
-local NotificationBindable = Instance.new("BindableFunction")
-NotificationBindable.OnInvoke = callback
- 
-game.StarterGui:SetCore("SendNotification", {
-    Title = "xerss";
-    Text = "Script loaded!";
-    Duration = "1";
-    Icon = "http://www.roblox.com/asset/?id=8709610734",
-    Callback = NotificationBindable;
-})
