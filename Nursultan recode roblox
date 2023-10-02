@@ -21,6 +21,49 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewButton("aziatka all (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for _, v in pairs(game.Players:GetPlayers()) do
+
+local args = {
+    [1] = 14294426918,
+    [2] = Enum.NormalId.Front,
+    [3] = 6,
+    [4] = v.Character.HumanoidRootPart,
+    [5] = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,1,1)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+local args = {
+    [1] = 14294426918,
+    [2] = Enum.NormalId.Back,
+    [3] = 6,
+    [4] = v.Character.HumanoidRootPart,
+    [5] = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,1,1)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end
+end)
+
 Section:NewButton("Russian flag (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -768,17 +811,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gamep
     
 end)
 
-Section:NewToggle("Fake speed", "ToggleInfo", function(esped)
+Section:NewToggle("zemlya v iluminatore", "ToggleInfo", function(esped)
 if esped then
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
 wait(0.1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.workspace.Gravity = 4
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
 
 else
   
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+game.workspace.Gravity = 192.2
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
   end
 end)
 
