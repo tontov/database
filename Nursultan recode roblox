@@ -766,6 +766,36 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewButton("4:3", "ButtonInfo", function()
+getgenv().Resolution = {
+    [".gg/kgbGjkAJsC"] = 0.65 -- 1 for normal 0.35 is good 0.65 good
+}
+local Camera = workspace.CurrentCamera
+if getgenv().gg_kgbGjkAJsC == nil then
+    game:GetService("RunService").RenderStepped:Connect(
+        function()
+            Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution[".gg/kgbGjkAJsC"], 0, 0, 0, 1)
+        end
+    )
+end
+getgenv().gg_kgbGjkAJsC = "Illness"
+end)
+
+Section:NewButton("16:9", "ButtonInfo", function()
+getgenv().Resolution = {
+    [".gg/kgbGjkAJsC"] = 1 -- 1 for normal 0.35 is good 0.65 good
+}
+local Camera = workspace.CurrentCamera
+if getgenv().gg_kgbGjkAJsC == nil then
+    game:GetService("RunService").RenderStepped:Connect(
+        function()
+            Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution[".gg/kgbGjkAJsC"], 0, 0, 0, 1)
+        end
+    )
+end
+getgenv().gg_kgbGjkAJsC = "Illness"
+end)
+
 Section:NewButton("Speed glitch (Teddy Bear need)", "ButtonInfo", function()
 
 local args = {
