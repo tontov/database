@@ -21,6 +21,89 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewButton("Noclip and godmode (Spray need)", "ButtonInfo", function()
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+wait(1)
+
+local args = {
+    [1] = 14882467507,
+    [2] = Enum.NormalId.Top,
+    [3] = 10000,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,4563457,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end)
+
+Section:NewToggle("Glitch fly (Spray need)", "ToggleInfo", function(efly)
+if efly then
+local args = {
+    [1] = "SprayPaint"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Extras"):WaitForChild("ReplicateToy"):InvokeServer(unpack(args))
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "Emotes" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v.name == "SprayPaint" then
+            v.Parent = game.Players.LocalPlayer.Character
+    end
+end
+
+for _, v in pairs(game.Players:GetPlayers()) do
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+wait(0.1)
+game.workspace.Gravity = 0
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+
+local args = {
+    [1] = 14882467507,
+    [2] = Enum.NormalId.Top,
+    [3] = 5,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(30,150,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end
+
+else
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+wait(0.1)
+game.workspace.Gravity = 192.2
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+
+end
+
+end)
+
 Section:NewButton("aziatka all (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -846,7 +929,7 @@ if esped then
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
 wait(0.1)
-game.workspace.Gravity = 4
+game.workspace.Gravity = 0
 game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
 
 else
