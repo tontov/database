@@ -21,6 +21,12 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 
+Section:NewSlider("Animation speed", "Makes you fast", 10, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    for _, v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+v:AdjustSpeed(s) 
+end
+end)
+
 Section:NewButton("Blind sheriff (Spray need)", "ButtonInfo", function()
 local args = {
     [1] = "SprayPaint"
@@ -1449,6 +1455,19 @@ end)
 coroutine.resume(Rejoin)
 end)
 
+Section:NewButton("Test emote", "ButtonInfo", function()
+a = Instance.new("Animation") 
+a.AnimationId = "rbxassetid://14438671649"
+b = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(a)
+b:Play()
+end)
+
+Section:NewButton("Stop emote", "ButtonInfo", function()
+for _, v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+v:Stop() 
+end
+end)
+
 Section:NewButton("Sit", "ButtonInfo", function()
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 
@@ -1906,7 +1925,7 @@ local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
 
 Section:NewSlider("Speed", "Makes you fast", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
 Section:NewButton("Def speed", "ButtonInfo", function()
@@ -1945,4 +1964,40 @@ Section:NewButton("Reset Fov", "ToggleInfo", function(efov)
     Callback = NotificationBindable;
 })
     
+end)
+
+Section:NewButton("Headless", "ButtonInfo", function()
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+end)
+
+local Tab = Window:NewTab("Fake emotes")
+
+local Section = Tab:NewSection("credits: supergovnuk, vanyamorozov")
+
+Section:NewButton("Sit", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("sit")
+end)
+
+Section:NewButton("Ninja", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("ninja")
+end)
+
+Section:NewButton("Dab", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("dab")
+end)
+
+Section:NewButton("Zen", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("zen")
+end)
+
+Section:NewButton("Floss", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("floss")
+end)
+
+Section:NewButton("Headless", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("headless")
+end)
+
+Section:NewButton("Zombie", "ButtonInfo", function()
+game.ReplicatedStorage.Remotes.Misc.PlayEmote:Fire("zombie")
 end)
